@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        GAManager.createNormalScreenEventWith("ViewController")
+        GAManager.createCustomScreenEventWith("ViewController")
         let event1Button = UIButton(type: .roundedRect)
         event1Button.frame = CGRect(x: 50, y: 50, width: 100, height: 30)
         event1Button.setTitle("Event 1", for: [])
@@ -27,14 +27,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func event1Tap(_ sender: AnyObject) {
-        GAManager.createNormalEventWith(category: "ViewController",
+        GAManager.createCustomEventWith(category: "ViewController",
                                         action: "Tap.event1",
                                         label: "event1",
                                         value: 1)
     }
 
     @IBAction func event2Tap(_ sender: AnyObject) {
-        GAManager.createNormalEventWith(category: "ViewController",
+        GAManager.createCustomEventWith(category: "ViewController",
                                         action: "Tap.event2",
                                         label: "event2",
                                         value: 1)
